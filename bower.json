@@ -1,0 +1,22 @@
+{
+  "name": "purescript-web-cssom-view",
+  "homepage": "https://github.com/keijokapp/purescript-web-cssom-view",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/keijokapp/purescript-web-cssom-view.git"
+  },
+  "ignore": [
+    "**/.*",
+    "bower_components",
+    "node_modules",
+    "output",
+    "bower.json",
+    "package.json"
+  ],
+  "dependencies": {
+    "purescript-web-events": "^2.0.1",
+    "purescript-web-html": "^2.3.0",
+    "purescript-web-geometry": "https://github.com/keijokapp/purescript-web-geometry.git"
+  }
+}
