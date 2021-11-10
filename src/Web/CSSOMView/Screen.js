@@ -14,3 +14,4 @@ exports.width = getter("width");
 exports.height = getter("height");
 exports.colorDepth = getter("colorDepth");
 exports.pixelDepth = getter("pixelDepth");
+exports.orientation = getter("orientation");
