@@ -15,6 +15,7 @@
     "package.json"
   ],
   "dependencies": {
+    "purescript-aff": "^6.0.0",
     "purescript-web-events": "^2.0.1",
     "purescript-web-html": "^2.3.0",
     "purescript-web-geometry": "https://github.com/keijokapp/purescript-web-geometry.git"

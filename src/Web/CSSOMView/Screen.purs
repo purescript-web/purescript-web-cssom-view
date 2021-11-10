@@ -1,12 +1,14 @@
 module Web.CSSOMView.Screen where
 
 import Effect (Effect)
+import Web.CSSOMView.ScreenOrientation (ScreenOrientation)
 
 foreign import data Screen :: Type
 
-foreign import availWidth :: Effect Int
-foreign import availHeight :: Effect Int
-foreign import width :: Effect Int
-foreign import height :: Effect Int
-foreign import colorDepth :: Effect Int
-foreign import pixelDepth :: Effect Int
+foreign import availWidth :: Screen -> Effect Int
+foreign import availHeight :: Screen -> Effect Int
+foreign import width :: Screen -> Effect Int
+foreign import height :: Screen -> Effect Int
+foreign import colorDepth :: Screen -> Effect Int
+foreign import pixelDepth :: Screen -> Effect Int
+foreign import orientation :: Screen -> Effect ScreenOrientation
