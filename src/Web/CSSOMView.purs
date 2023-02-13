@@ -10,7 +10,7 @@ data ScrollBehavior = Auto | Smooth
 type ScrollToOptions =
   { left :: Number
   , top :: Number
-  , behaviour :: ScrollBehavior
+  , behavior :: ScrollBehavior
   }
 
 data ScrollLogicalPosition = Start | Center | End | Nearest

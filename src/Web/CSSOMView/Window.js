@@ -72,7 +72,7 @@ exports.scroll = function (window) {
     return function () {
       if (typeof options.value0 === "object") {
         var newObject = Object.assign({}, options.value0);
-        newObject.behaviour = newObject.behaviour.value0.constructor.name.toLowerCase();
+        newObject.behavior = newObject.behavior.value0.constructor.name.toLowerCase();
         window.scroll(newObject);
       } else {
         window.scroll();
@@ -86,7 +86,7 @@ exports.scrollTo = function (window) {
     return function () {
       if (typeof options.value0 === "object") {
         var newObject = Object.assign({}, options.value0);
-        newObject.behaviour = newObject.behaviour.value0.constructor.name.toLowerCase();
+        newObject.behavior = newObject.behavior.value0.constructor.name.toLowerCase();
         window.scrollTo(newObject);
       } else {
         window.scrollTo();
@@ -100,7 +100,7 @@ exports.scrollBy = function (window) {
     return function () {
       if (typeof options.value0 === "object") {
         var newObject = Object.assign({}, options.value0);
-        newObject.behaviour = newObject.behaviour.value0.constructor.name.toLowerCase();
+        newObject.behavior = newObject.behavior.value0.constructor.name.toLowerCase();
         window.scrollBy(newObject);
       } else {
         window.scrollBy();
