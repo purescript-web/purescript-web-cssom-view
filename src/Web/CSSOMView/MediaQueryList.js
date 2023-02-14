@@ -1,29 +1,27 @@
-"use strict";
-
-exports.media = function (mediaQueryList) {
+export function media(mediaQueryList) {
   return function () {
     return mediaQueryList.media;
   };
-};
+}
 
-exports.matches = function (mediaQueryList) {
+export function matches(mediaQueryList) {
   return function () {
     return mediaQueryList.matches;
   };
-};
+}
 
-exports.addListener = function (mediaQueryList) {
+export function addListener(mediaQueryList) {
   return function (callback) {
     return function () {
       mediaQueryList.addListener(callback);
     };
   };
-};
+}
 
-exports.removeListener = function (mediaQueryList) {
+export function removeListener(mediaQueryList) {
   return function (callback) {
     return function () {
       mediaQueryList.removeListener(callback);
     };
   };
-};
+}

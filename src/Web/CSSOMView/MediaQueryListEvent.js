@@ -1,9 +1,7 @@
-"use strict";
-
-exports.media = function (mediaQueryListEvent) {
+export function media(mediaQueryListEvent) {
   return mediaQueryListEvent.media;
-};
+}
 
-exports.matches = function (mediaQueryListEvent) {
+export function matches(mediaQueryListEvent) {
   return mediaQueryListEvent.matches;
-};
+}

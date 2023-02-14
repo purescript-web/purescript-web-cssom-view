@@ -1,13 +1,11 @@
-"use strict";
-
-exports.x = function (imageElement) {
+export function x(imageElement) {
   return function () {
     return imageElement.x;
   };
-};
+}
 
-exports.y = function (imageElement) {
+export function y(imageElement) {
   return function () {
     return imageElement.y;
   };
-};
+}
