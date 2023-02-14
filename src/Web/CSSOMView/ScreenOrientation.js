@@ -1,6 +1,4 @@
-"use strict";
-
-exports.lockImpl = function lock(orientation) {
+export function lockImpllock(orientation) {
   return function(so) {
     return function(onError, onSuccess) {
       so.lock(orientation).then(onSuccess, onError);
@@ -9,20 +7,20 @@ exports.lockImpl = function lock(orientation) {
       };
     };
   };
-};
+}
 
-exports.unlockImpl = function(so) {
+export function unlockImpl(so) {
   return so.unlock();
-};
+}
 
-exports.typeImpl = function(so) {
+export function typeImpl(so) {
   return so.type;
-};
+}
 
-exports.angleImpl = function(so) {
+export function angleImpl(so) {
   return so.angle;
-};
+}
 
-exports.onChangeImpl = function(handler, so) {
+export function onChangeImpl(handler, so) {
   so.onchange = handler;
-};
+}

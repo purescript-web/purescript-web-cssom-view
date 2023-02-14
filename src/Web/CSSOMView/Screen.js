@@ -1,5 +1,3 @@
-"use strict";
-
 function getter(property) {
   return function (screen) {
     return function () {
@@ -8,10 +6,10 @@ function getter(property) {
   };
 }
 
-exports.availWidth = getter("availWidth");
-exports.availHeight = getter("availHeight");
-exports.width = getter("width");
-exports.height = getter("height");
-exports.colorDepth = getter("colorDepth");
-exports.pixelDepth = getter("pixelDepth");
-exports.orientation = getter("orientation");
+export const availWidth = getter("availWidth");
+export const availHeight = getter("availHeight");
+export const width = getter("width");
+export const height = getter("height");
+export const colorDepth = getter("colorDepth");
+export const pixelDepth = getter("pixelDepth");
+export const orientation = getter("orientation");

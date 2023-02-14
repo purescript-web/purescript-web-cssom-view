@@ -1,5 +1,3 @@
-"use strict";
-
 function getter(property) {
   return function (window) {
     return function () {
@@ -8,19 +6,19 @@ function getter(property) {
   };
 }
 
-exports.matchMedia = function (window) {
+export function matchMedia(window) {
   return function (query) {
     return function () {
       return window.matchMedia(query);
     };
   };
-};
+}
 
-exports.screen = function (window) {
+export function screen(window) {
   return window.screen;
-};
+}
 
-exports.moveTo = function (window) {
+export function moveTo(window) {
   return function (x) {
     return function (y) {
       return function () {
@@ -28,9 +26,9 @@ exports.moveTo = function (window) {
       };
     };
   };
-};
+}
 
-exports.moveBy = function (window) {
+export function moveBy(window) {
   return function (x) {
     return function (y) {
       return function () {
@@ -38,9 +36,9 @@ exports.moveBy = function (window) {
       };
     };
   };
-};
+}
 
-exports.resizeTo = function (window) {
+export function resizeTo(window) {
   return function (width) {
     return function (height) {
       return function () {
@@ -48,9 +46,9 @@ exports.resizeTo = function (window) {
       };
     };
   };
-};
+}
 
-exports.resizeBy = function (window) {
+export function resizeBy(window) {
   return function (x) {
     return function (y) {
       return function () {
@@ -58,16 +56,16 @@ exports.resizeBy = function (window) {
       };
     };
   };
-};
+}
 
-exports.innerWidth = getter("innerWidth");
-exports.innerHeight = getter("innerHeight");
-exports.scrollX = getter("scrollX");
-exports.pageXOffset = getter("pageXOffset");
-exports.scrollY = getter("scrollY");
-exports.pageYOffset = getter("pageYOffset");
+export const innerWidth = getter("innerWidth");
+export const innerHeight = getter("innerHeight");
+export const scrollX = getter("scrollX");
+export const pageXOffset = getter("pageXOffset");
+export const scrollY = getter("scrollY");
+export const pageYOffset = getter("pageYOffset");
 
-exports.scroll = function (window) {
+export function scroll(window) {
   return function (options) {
     return function () {
       if (typeof options.value0 === "object") {
@@ -79,9 +77,9 @@ exports.scroll = function (window) {
       }
     };
   };
-};
+}
 
-exports.scrollTo = function (window) {
+export function scrollTo(window) {
   return function (options) {
     return function () {
       if (typeof options.value0 === "object") {
@@ -93,9 +91,9 @@ exports.scrollTo = function (window) {
       }
     };
   };
-};
+}
 
-exports.scrollBy = function (window) {
+export function scrollBy(window) {
   return function (options) {
     return function () {
       if (typeof options.value0 === "object") {
@@ -107,12 +105,12 @@ exports.scrollBy = function (window) {
       }
     };
   };
-};
+}
 
-exports.screenX = getter("screenX");
-exports.screenLeft = getter("screenLeft");
-exports.screenY = getter("screenY");
-exports.screenTop = getter("screenTop");
-exports.outerWidth = getter("outerWidth");
-exports.outerHeight = getter("outerHeight");
-exports.devicePixelRatio = getter("devicePixelRatio");
+export const screenX = getter("screenX");
+export const screenLeft = getter("screenLeft");
+export const screenY = getter("screenY");
+export const screenTop = getter("screenTop");
+export const outerWidth = getter("outerWidth");
+export const outerHeight = getter("outerHeight");
+export const devicePixelRatio = getter("devicePixelRatio");
