@@ -1,4 +1,4 @@
-export function lockImpllock(orientation) {
+export function lockImpl(orientation) {
   return function(so) {
     return function(onError, onSuccess) {
       so.lock(orientation).then(onSuccess, onError);
