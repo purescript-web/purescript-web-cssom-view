@@ -14,8 +14,8 @@ export function getBoundingClientRect(element) {
   };
 }
 
-export function scrollIntoView(element) {
-  return function (scrollIntoViewOptions) {
+export function scrollIntoView(scrollIntoViewOptions) {
+  return function (element) {
     return function () {
       if (scrollIntoViewOptions.value0) {
         element.scrollIntoView({
@@ -29,24 +29,24 @@ export function scrollIntoView(element) {
   };
 }
 
-export function scroll(element) {
-  return function (scrollToOptions) {
+export function scroll(scrollToOptions) {
+  return function (element) {
     return function () {
       element.scrollIntoView(convertScrollToOptions(scrollToOptions));
     };
   };
 }
 
-export function scrollTo(element) {
-  return function (scrollToOptions) {
+export function scrollTo(scrollToOptions) {
+  return function (element) {
     return function () {
       element.scrollTo(convertScrollToOptions(scrollToOptions));
     };
   };
 }
 
-export function scrollBy(element) {
-  return function (scrollToOptions) {
+export function scrollBy(scrollToOptions) {
+  return function (element) {
     return function () {
       element.scrollBy(convertScrollToOptions(scrollToOptions));
     };

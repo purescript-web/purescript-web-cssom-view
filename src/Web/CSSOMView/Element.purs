@@ -9,10 +9,10 @@ import Web.CSSOMView (ScrollIntoViewOptions, ScrollToOptions)
 
 foreign import getClientRects :: Element -> Effect DOMRectList
 foreign import getBoundingClientRect :: Element -> Effect DOMRect
-foreign import scrollIntoView :: Element -> Maybe ScrollIntoViewOptions -> Effect Unit
-foreign import scroll :: Element -> Maybe ScrollToOptions -> Effect Unit
-foreign import scrollTo :: Element -> Maybe ScrollToOptions -> Effect Unit
-foreign import scrollBy :: Element -> Maybe ScrollToOptions -> Effect Unit
+foreign import scrollIntoView :: Maybe ScrollIntoViewOptions -> Element -> Effect Unit
+foreign import scroll :: Maybe ScrollToOptions -> Element -> Effect Unit
+foreign import scrollTo :: Maybe ScrollToOptions -> Element -> Effect Unit
+foreign import scrollBy :: Maybe ScrollToOptions -> Element -> Effect Unit
 foreign import scrollTop :: Element -> Effect Number
 foreign import scrollLeft :: Element -> Effect Number
 foreign import scrollWidth :: Element -> Effect Int

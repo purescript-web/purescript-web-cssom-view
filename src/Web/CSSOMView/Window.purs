@@ -8,12 +8,12 @@ import Web.CSSOMView (ScrollToOptions)
 import Web.CSSOMView.Screen (Screen)
 import Web.CSSOMView.MediaQueryList (MediaQueryList)
 
-foreign import matchMedia :: Window -> String -> Effect MediaQueryList
+foreign import matchMedia :: String -> Window -> Effect MediaQueryList
 foreign import screen :: Window -> Screen
-foreign import moveTo :: Window -> Int -> Int -> Effect Unit
-foreign import moveBy :: Window -> Int -> Int -> Effect Unit
-foreign import resizeTo :: Window -> Int -> Int -> Effect Unit
-foreign import resizeBy :: Window -> Int -> Int -> Effect Unit
+foreign import moveTo :: Int -> Int -> Window -> Effect Unit
+foreign import moveBy :: Int -> Int -> Window -> Effect Unit
+foreign import resizeTo :: Int -> Int -> Window -> Effect Unit
+foreign import resizeBy :: Int -> Int -> Window -> Effect Unit
 
 foreign import innerWidth :: Window -> Effect Int
 foreign import innerHeight :: Window -> Effect Int
@@ -23,9 +23,9 @@ foreign import pageXOffset :: Window -> Effect Number
 foreign import scrollY :: Window -> Effect Number
 foreign import pageYOffset :: Window -> Effect Number
 
-foreign import scroll :: Window -> Maybe ScrollToOptions -> Effect Unit
-foreign import scrollTo :: Window -> Maybe ScrollToOptions -> Effect Unit
-foreign import scrollBy :: Window -> Maybe ScrollToOptions -> Effect Unit
+foreign import scroll :: Maybe ScrollToOptions -> Window -> Effect Unit
+foreign import scrollTo :: Maybe ScrollToOptions -> Window -> Effect Unit
+foreign import scrollBy :: Maybe ScrollToOptions -> Window -> Effect Unit
 
 foreign import screenX :: Window -> Effect Int
 foreign import screenLeft :: Window -> Effect Int
