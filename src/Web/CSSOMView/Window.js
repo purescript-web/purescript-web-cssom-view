@@ -6,8 +6,8 @@ function getter(property) {
   };
 }
 
-export function matchMedia(window) {
-  return function (query) {
+export function matchMedia(query) {
+  return function (window) {
     return function () {
       return window.matchMedia(query);
     };
@@ -18,9 +18,9 @@ export function screen(window) {
   return window.screen;
 }
 
-export function moveTo(window) {
-  return function (x) {
-    return function (y) {
+export function moveTo(x) {
+  return function (y) {
+    return function (window) {
       return function () {
         return window.moveTo(x, y);
       };
@@ -28,9 +28,9 @@ export function moveTo(window) {
   };
 }
 
-export function moveBy(window) {
-  return function (x) {
-    return function (y) {
+export function moveBy(x) {
+  return function (y) {
+    return function (window) {
       return function () {
         return window.moveTo(x, y);
       };
@@ -38,9 +38,9 @@ export function moveBy(window) {
   };
 }
 
-export function resizeTo(window) {
-  return function (width) {
-    return function (height) {
+export function resizeTo(width) {
+  return function (height) {
+    return function (window) {
       return function () {
         return window.moveTo(width, height);
       };
@@ -48,9 +48,9 @@ export function resizeTo(window) {
   };
 }
 
-export function resizeBy(window) {
-  return function (x) {
-    return function (y) {
+export function resizeBy(x) {
+  return function (y) {
+    return function (window) {
       return function () {
         return window.moveTo(x, y);
       };
@@ -79,8 +79,8 @@ export function scroll(window) {
   };
 }
 
-export function scrollTo(window) {
-  return function (options) {
+export function scrollTo(options) {
+  return function (window) {
     return function () {
       if (typeof options.value0 === "object") {
         var newObject = Object.assign({}, options.value0);
@@ -93,8 +93,8 @@ export function scrollTo(window) {
   };
 }
 
-export function scrollBy(window) {
-  return function (options) {
+export function scrollBy(options) {
+  return function (window) {
     return function () {
       if (typeof options.value0 === "object") {
         var newObject = Object.assign({}, options.value0);

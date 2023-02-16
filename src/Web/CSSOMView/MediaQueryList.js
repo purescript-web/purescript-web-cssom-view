@@ -10,16 +10,16 @@ export function matches(mediaQueryList) {
   };
 }
 
-export function addListener(mediaQueryList) {
-  return function (callback) {
+export function addListener(callback) {
+  return function (mediaQueryList) {
     return function () {
       mediaQueryList.addListener(callback);
     };
   };
 }
 
-export function removeListener(mediaQueryList) {
-  return function (callback) {
+export function removeListener(callback) {
+  return function (mediaQueryList) {
     return function () {
       mediaQueryList.removeListener(callback);
     };
