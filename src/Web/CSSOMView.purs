@@ -5,7 +5,7 @@ import Web.CSSOMView.MediaQueryList (MediaQueryList) as CSSOMView
 import Web.CSSOMView.MediaQueryListEvent (MediaQueryListEvent) as CSSOMView
 import Web.CSSOMView.Screen (Screen) as CSSOMView
 
-data ScrollBehavior = Auto | Smooth
+data ScrollBehavior = Auto | Instant | Smooth
 
 type ScrollToOptions =
   { left :: Number
