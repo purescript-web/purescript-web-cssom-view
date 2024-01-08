@@ -1,7 +1,3 @@
-function convertScrollToOptions(options) {
-  return options.value0 && Object.assign({}, options.value0, { behavior: options.value0.constructor.name.toLowerCase() });
-}
-
 export function getClientRects(element) {
   return function () {
     return element.getClientRects();
@@ -14,41 +10,34 @@ export function getBoundingClientRect(element) {
   };
 }
 
-export function scrollIntoView(scrollIntoViewOptions) {
+export function _scrollIntoView(scrollIntoViewOptions) {
   return function (element) {
     return function () {
-      if (scrollIntoViewOptions.value0) {
-        element.scrollIntoView({
-          block: scrollIntoViewOptions.value0.block.constructor.name.toLowerCase(),
-          inline: scrollIntoViewOptions.value0.inline.constructor.name.toLowerCase()
-        });
-      } else {
-        element.scrollIntoView();
-      }
+      element.scrollIntoView(scrollIntoViewOptions);
     };
   };
 }
 
-export function scroll(scrollToOptions) {
+export function _scroll(scrollToOptions) {
   return function (element) {
     return function () {
-      element.scrollIntoView(convertScrollToOptions(scrollToOptions));
+      element.scrollIntoView(scrollToOptions);
     };
   };
 }
 
-export function scrollTo(scrollToOptions) {
+export function _scrollTo(scrollToOptions) {
   return function (element) {
     return function () {
-      element.scrollTo(convertScrollToOptions(scrollToOptions));
+      element.scrollTo(scrollToOptions);
     };
   };
 }
 
-export function scrollBy(scrollToOptions) {
+export function _scrollBy(scrollToOptions) {
   return function (element) {
     return function () {
-      element.scrollBy(convertScrollToOptions(scrollToOptions));
+      element.scrollBy(scrollToOptions);
     };
   };
 }

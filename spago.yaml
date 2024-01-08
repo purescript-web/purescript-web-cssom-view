@@ -1,0 +1,18 @@
+package:
+  name: web-cssom-view
+  build:
+    strict: true
+  dependencies:
+    - aff
+    - effect
+    - maybe
+    - nullable
+    - prelude
+    - unsafe-coerce
+    - web-dom
+    - web-events
+    - web-geometry
+    - web-html
+workspace:
+  package_set:
+    registry: 47.12.0

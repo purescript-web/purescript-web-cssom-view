@@ -65,44 +65,26 @@ export const pageXOffset = getter("pageXOffset");
 export const scrollY = getter("scrollY");
 export const pageYOffset = getter("pageYOffset");
 
-export function scroll(window) {
-  return function (options) {
+export function _scroll(scrollToOptions) {
+  return function (window) {
     return function () {
-      if (typeof options.value0 === "object") {
-        var newObject = Object.assign({}, options.value0);
-        newObject.behavior = newObject.behavior.value0.constructor.name.toLowerCase();
-        window.scroll(newObject);
-      } else {
-        window.scroll();
-      }
+      window.scrollBy(scrollToOptions);
     };
   };
 }
 
-export function scrollTo(options) {
+export function _scrollTo(scrollToOptions) {
   return function (window) {
     return function () {
-      if (typeof options.value0 === "object") {
-        var newObject = Object.assign({}, options.value0);
-        newObject.behavior = newObject.behavior.value0.constructor.name.toLowerCase();
-        window.scrollTo(newObject);
-      } else {
-        window.scrollTo();
-      }
+      window.scrollBy(scrollToOptions);
     };
   };
 }
 
-export function scrollBy(options) {
+export function _scrollBy(scrollToOptions) {
   return function (window) {
     return function () {
-      if (typeof options.value0 === "object") {
-        var newObject = Object.assign({}, options.value0);
-        newObject.behavior = newObject.behavior.value0.constructor.name.toLowerCase();
-        window.scrollBy(newObject);
-      } else {
-        window.scrollBy();
-      }
+      window.scrollBy(scrollToOptions);
     };
   };
 }
