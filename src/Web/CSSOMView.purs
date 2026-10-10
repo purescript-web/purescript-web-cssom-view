@@ -1,5 +1,10 @@
-module Web.CSSOMView (module CSSOMView, ScrollBehavior(..), ScrollToOptions,
-  ScrollLogicalPosition(..), ScrollIntoViewOptions) where
+module Web.CSSOMView
+  ( module CSSOMView
+  , ScrollBehavior(..)
+  , ScrollToOptions
+  , ScrollLogicalPosition(..)
+  , ScrollIntoViewOptions
+  ) where
 
 import Web.CSSOMView.MediaQueryList (MediaQueryList) as CSSOMView
 import Web.CSSOMView.MediaQueryListEvent (MediaQueryListEvent) as CSSOMView
