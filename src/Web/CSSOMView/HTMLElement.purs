@@ -14,4 +14,4 @@ foreign import offsetWidth :: HTMLElement -> Effect Int
 foreign import offsetHeight :: HTMLElement -> Effect Int
 
 offsetParent :: HTMLElement -> Effect (Maybe Element)
-offsetParent  = map toMaybe <<< _offsetParent
+offsetParent = map toMaybe <<< _offsetParent

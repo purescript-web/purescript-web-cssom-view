@@ -1,6 +1,4 @@
-/.pulp-cache
 /.spago
-/bower_components
 /node_modules
 /output
 /generated-docs

@@ -13,8 +13,7 @@ module Web.CSSOMView.Element
   , scrollTo
   , scrollTop
   , scrollWidth
-  )
-  where
+  ) where
 
 import Data.Maybe (Maybe(..))
 import Effect (Effect)
@@ -40,10 +39,13 @@ foreign import clientHeight :: Element -> Effect Int
 
 scrollIntoView :: Maybe ScrollIntoViewOptions -> Element -> Effect Unit
 scrollIntoView scrollIntoViewOptions = _scrollIntoView (primitiveScrollIntoViewOptions scrollIntoViewOptions)
+
 scroll :: Maybe ScrollToOptions -> Element -> Effect Unit
 scroll scrollToOptions = _scroll (primitiveScrollToOptions scrollToOptions)
+
 scrollTo :: Maybe ScrollToOptions -> Element -> Effect Unit
 scrollTo scrollToOptions = _scrollTo (primitiveScrollToOptions scrollToOptions)
+
 scrollBy :: Maybe ScrollToOptions -> Element -> Effect Unit
 scrollBy scrollToOptions = _scrollBy (primitiveScrollToOptions scrollToOptions)
 
@@ -59,7 +61,7 @@ primitiveBehavior Instant = "instant"
 primitiveBehavior Smooth = "smooth"
 
 primitiveScrollToOptions :: Maybe ScrollToOptions -> PrimitiveScrollToOptions
-primitiveScrollToOptions Nothing = { left: 0.0, top: 0.0, behavior: "auto"  }
+primitiveScrollToOptions Nothing = { left: 0.0, top: 0.0, behavior: "auto" }
 primitiveScrollToOptions (Just scrollToOptions) =
   { left: scrollToOptions.left
   , top: scrollToOptions.top

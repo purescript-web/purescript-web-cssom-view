@@ -1,6 +1,6 @@
 export function lockImpl(orientation) {
-  return function(so) {
-    return function(onError, onSuccess) {
+  return function (so) {
+    return function (onError, onSuccess) {
       so.lock(orientation).then(onSuccess, onError);
       return function canceler(cancelError, onCancelerError, onCancelerSuccess) {
         onCancelerSuccess();
