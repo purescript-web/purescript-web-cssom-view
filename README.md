@@ -5,7 +5,7 @@ Type definitions and low level interface implementations for the [W3C CSSOM View
 ## Installation
 
 ```
-bower install purescript-web-cssom-view
+spago install web-cssom-view
 ```
 
 ## Documentation
